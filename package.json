@@ -1,0 +1,27 @@
+{
+  "name": "attendance-tracker",
+  "version": "1.0.0",
+  "description": "A Web app to track attendance of subjects",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Eshanjain04/attendance-tracking-App.git"
+  },
+  "author": "Eshan Jain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Eshanjain04/attendance-tracking-App/issues"
+  },
+  "homepage": "https://github.com/Eshanjain04/attendance-tracking-App#readme",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "mongoose": "^6.5.2",
+    "nodemon": "^2.0.19"
+  }
+}

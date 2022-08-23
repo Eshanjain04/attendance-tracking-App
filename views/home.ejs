@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/home.css">
+    <title>Track your attendance</title>
+</head>
+<body>    
+    <div class="wrapper">
+        <div class="heading">
+            <h1>Attendance Tracker</h1>
+        </div>
+        <% subject_name.forEach(subject=>{ %>
+            <div class="subject-container">
+                <form action="/attend/<%=subject._id%>" method="post" name="attend">
+                    <button id="attend" type="submit">+</button>
+                </form>
+                <label for="subject"><%= subject.name %></label>
+                <label for="percentage"><%=subject.percentage%></label>
+                <form action="/missed/<%=subject._id%>" method="post" name="missed">
+                    <button id="reduce" type="submit">-</button>
+                </form>
+            </div>
+        <% }) %>
+        <div class="addsubject">
+            <a href="/add">Add Subject</a>
+        </div>
+    </div>
+</body>
+</html>
