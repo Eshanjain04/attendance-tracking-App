@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Space+Grotesk:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/home.css">
     <title>Track your attendance</title>
 </head>
@@ -13,14 +16,14 @@
             <h1>Attendance Tracker</h1>
         </div>
         <% subject_name.forEach(subject=>{ %>
-            <div class="subject-container">
-                <form action="/attend/<%=subject._id%>" method="post" name="attend">
-                    <button id="attend" type="submit">+</button>
+            <div class="subject-container" style="background: -webkit-linear-gradient(left, #389f66 <%=subject.percentage%> , #ffffff 0%)" >
+                <form action="/missed/<%=subject._id%>" method="post" name="missed">
+                    <button id="reduce" type="submit">-</button>
                 </form>
                 <label for="subject"><%= subject.name %></label>
                 <label for="percentage"><%=subject.percentage%></label>
-                <form action="/missed/<%=subject._id%>" method="post" name="missed">
-                    <button id="reduce" type="submit">-</button>
+                <form action="/attend/<%=subject._id%>" method="post" name="attend">
+                    <button id="attend" type="submit">+</button>
                 </form>
             </div>
         <% }) %>
@@ -30,3 +33,5 @@
     </div>
 </body>
 </html>
+
+<!-- 44c27d -->
