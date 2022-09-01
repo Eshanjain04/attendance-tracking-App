@@ -8,12 +8,22 @@
     <title>Add Your Subject</title>
 </head>
 <body>
-    <div class="add-subject-form-container">
-        <form action="/subject/add" method="post" name="subjectName">
-            <label for="subjectName">Enter Subject Name</label>
-            <input name="subjectName" type="text">
-            <button type="submit">Submit</button>
-        </form>
+    <div class="heading">
+        <ul>
+            <li><a href="/">Home</a></li>
+        </ul>
+        <h1>Attendance Tracker</h1>
     </div>
+    <div class="form-container">
+        <h2>Add Your Subjects</h2>
+        <div class="add-subject-form-container">
+            <form action="/subject/add" method="post" name="subjectName">
+                <label for="subjectName">Enter Subject Name</label>
+                <input name="subjectName" type="text" placeholder="e.g. Maths">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    
 </body>
 </html>

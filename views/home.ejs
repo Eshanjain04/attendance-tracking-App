@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Space+Grotesk:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/home.css">
+    <script src="https://kit.fontawesome.com/8f89bdaa7f.js" crossorigin="anonymous"></script>
     <title>Track your attendance</title>
 </head>
 <body>    
@@ -16,22 +17,37 @@
             <h1>Attendance Tracker</h1>
         </div>
         <% subject_name.forEach(subject=>{ %>
-            <div class="subject-container" style="background: -webkit-linear-gradient(left, #389f66 <%=subject.percentage%> , #ffffff 0%)" >
-                <form action="/missed/<%=subject._id%>" method="post" name="missed">
-                    <button id="reduce" type="submit">-</button>
-                </form>
-                <label for="subject"><%= subject.name %></label>
-                <label for="percentage"><%=subject.percentage%></label>
-                <form action="/attend/<%=subject._id%>" method="post" name="attend">
-                    <button id="attend" type="submit">+</button>
-                </form>
+            <div class="subject-container-wrapper">
+                <div class="subject-container" style="background: -webkit-linear-gradient(left, #4abd7e <%=subject.percentage%> , #ffffff 0%)" >
+                    <form action="/missed/<%=subject._id%>" method="post" name="missed">
+                        <button class="btn" id="reduce" type="submit">-</button>
+                    </form>
+                    <label for="subject"><%= subject.name %></label>
+                    <label for="percentage"><%=subject.percentage%></label>
+                    <div class="classes">
+                        <label for="totalClasses">Total Classes - <%=subject.totalClass%></label>
+                        <label for="attended">Attended - <%=subject.attendance%></label>
+                    </div>
+                    
+                    <form action="/attend/<%=subject._id%>" method="post" name="attend">
+                        <button class="btn" id="attend" type="submit">+</button>
+                    </form>
+                </div>
+                <span class="delete-btn">
+                    <form action="/subject/<%= subject._id %>/delete" method="post" name="delete">
+                        <button class="btn delete" type="submit">    
+                            <i class="fa-regular fa-trash-can icon-4x"></i>
+                        </button>
+                        
+                    </form>
+                </span>
             </div>
+            
         <% }) %>
         <div class="addsubject">
             <a href="/add">Add Subject</a>
         </div>
     </div>
 </body>
-</html>
 
-<!-- 44c27d -->
+</html>
