@@ -1,0 +1,50 @@
+.register-form-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: rgb(230, 229, 229);
+    width: 35%;
+    margin: 200px auto;
+    border-radius: 15px;
+    border: 1px solid rgb(25, 125, 174);
+}
+
+label{
+    font-size: 20px;
+}
+
+input{
+    margin: 15px;
+    border-radius: 6px;
+    padding: 5px;
+    width: 20rem;
+}
+
+.register-form-container form .email-container input{
+    margin-left: 50px;
+}
+
+.signup-button-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+button{
+    padding: 10px;
+    width: 80px;
+    border-radius: 20px;
+    font-size: 15px;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: rgb(41, 61, 105);
+    color: white;
+}
+
+.register-link-container, .login-link-container{
+    text-align: center;
+}
