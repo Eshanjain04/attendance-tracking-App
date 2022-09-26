@@ -1,7 +1,9 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const path = require("path");
-mongoose.connect("mongodb+srv://admin:admin@attendancetracker.j2lmwhi.mongodb.net/?retryWrites=true&w=majority");
+require("dotenv").config();
+const dbUrl = process.env.DATABASE_URL;
+mongoose.connect(dbUrl,()=>console.log("DB is Connected"));
 const user = require("./Schemas/user");
 const subject = require("./Schemas/subject");
 const app = express();
