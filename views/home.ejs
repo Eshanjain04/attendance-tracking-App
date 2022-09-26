@@ -28,8 +28,8 @@
                     <label for="subject"><%= subject.name %></label>
                     <label for="percentage"><%=subject.percentage%></label>
                     <div class="classes">
-                        <label for="totalClasses">Total Classes - <%=subject.totalClass%></label>
-                        <label for="attended">Attended - <%=subject.attendance%></label>
+                        <label class="total" for="totalClasses">Total Classes - <%=subject.totalClass%></label>
+                        <label class="attend" for="attended">Attended - <%=subject.attendance%></label>
                     </div>
                     
                     <form action="/attend/<%=subject._id%>" method="post" name="attend">

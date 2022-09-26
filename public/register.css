@@ -48,3 +48,41 @@ button:hover{
 .register-link-container, .login-link-container{
     text-align: center;
 }
+
+@media screen and (max-width:480px) {
+    .register-form-container{
+        flex-direction: column;
+        justify-content: center;
+        width: 70%;
+        margin: 100px auto;
+    }
+
+    .register-form-container form div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    input{
+        width: 13rem;
+        
+    }
+
+    .register-form-container form .email-container input{
+        margin-left: 12px;
+    }
+
+    
+    label{
+        font-size: 15px;
+
+    }
+
+    button{
+        padding: 8px;
+        width: 70px;
+        border-radius: 20px;
+        font-size: 12px;
+    }
+}

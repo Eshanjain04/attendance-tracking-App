@@ -74,3 +74,39 @@ ul li:hover{
     cursor: pointer;
 }
 
+
+@media screen and (max-width:480px) {
+    .heading h1{
+        font-size: 23px;
+        padding-top: 11px;
+    }
+
+    .heading ul li a {
+        padding: 4px 13px;
+    }
+
+    .form-container{
+        padding-top: 100px;
+    }
+
+    .add-subject-form-container form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .add-subject-form-container form input{ 
+        width: 100%;
+        padding-left: 10px;
+        border-radius: 10px;
+    }
+
+    button{
+        padding: 10px;
+        width: 80px;
+        border-radius: 20px;
+        font-size: 12px;
+    }
+}
