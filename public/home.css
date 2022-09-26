@@ -46,6 +46,7 @@ body{
     justify-content: space-between;
     width: 50%;
     margin:50px;
+    transition: background 2000ms linear;
 }
 
 .btn{
@@ -79,6 +80,11 @@ label{
     background-color: rgb(41, 61, 105);
     color: white;
     font-size: 16px;
+}
+
+.addsubject a:hover{
+    background-color: #4abd7e;
+    color: black;
 }
 
 .subject-container{

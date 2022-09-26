@@ -21,7 +21,7 @@
         </div>
         <% subject_name.forEach(subject=>{ %>
             <div class="subject-container-wrapper">
-                <div class="subject-container" style="background: -webkit-linear-gradient(left, #4abd7e <%=subject.percentage%> , #ffffff 0%)" >
+                <div class="subject-container" style="background: -webkit-linear-gradient(left, #4abd7e <%=subject.percentage%> , #ffffff 0%)">
                     <form action="/missed/<%=subject._id%>" method="post" name="missed">
                         <button class="btn" id="reduce" type="submit">-</button>
                     </form>

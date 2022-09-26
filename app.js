@@ -1,11 +1,11 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const path = require("path");
-mongoose.connect("mongodb://localhost/attendance_tracker");
+mongoose.connect("mongodb+srv://admin:admin@attendancetracker.j2lmwhi.mongodb.net/?retryWrites=true&w=majority");
 const user = require("./Schemas/user");
 const subject = require("./Schemas/subject");
 const app = express();
-const port = 3002;
+const port = process.env.PORT || 8080;
 const bcrypt = require("bcrypt");
 const session = require("express-session");
 const middleware = require("./middleware");
@@ -94,7 +94,7 @@ app.post("/register" ,async(req,res)=>{
         var userData = await user.findOne({email:email});
         req.session.user = userData;
         
-        res.redirect("/home");
+        res.redirect("/");
     }catch(e){
         console.log(e);
     }
